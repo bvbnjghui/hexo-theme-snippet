@@ -1,0 +1,12 @@
+<% if(!is_home() && is_post() && toc(page.content)){ %>
+    <div class="widget">
+        <h3 class="title">
+            <%= __('toc') %>
+        </h3>
+        <% if(toc(page.content)){ %>
+        <%- toc(page.content,{list_number:false}) %>
+        <% } else { %>
+        <p>暂无目录</p>
+        <% } %>
+    </div>
+<% } %>
